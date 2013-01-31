@@ -57,10 +57,10 @@ cd ..
 export PATH=$PATH:$HOME/.cabal
 
 # Install a binary that Yesod needs separately
-cabal update
-cabal install happy
-find $HOME/.cabal -name "*HS*.o" -delete
-rm -rf $HOME/.cabal/{config,share,packages,logs}
+# cabal update
+# cabal install happy
+# find $HOME/.cabal -name "*HS*.o" -delete
+# rm -rf $HOME/.cabal/{config,share,packages,logs}
 
 tar cvzf ghc.tar.gz ghc
 tar cvzf cabal.tar.gz .cabal
