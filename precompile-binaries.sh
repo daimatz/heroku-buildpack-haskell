@@ -49,12 +49,15 @@ sed -i "s/ld-options:/ld-options:\ -L\/app\/usr\/lib/" base.package.conf
 ghc-pkg update base.package.conf
 
 # cabal-install
-curl --silent http://hackage.haskell.org/packages/archive/cabal-install/1.16.0.1/cabal-install-1.16.0.1.tar.gz|tar xz
-cd cabal-install-1.16.0.1/
+curl --silent http://hackage.haskell.org/packages/archive/cabal-install/1.16.0.2/cabal-install-1.16.0.2.tar.gz|tar xz
+cd cabal-install-1.16.0.2/
 sh bootstrap.sh
 cd ..
 
 export PATH=$PATH:$HOME/.cabal
+
+cabal update
+cabal install cabal-install
 
 # Install a binary that Yesod needs separately
 # cabal update
