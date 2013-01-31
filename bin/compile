@@ -58,7 +58,7 @@ export PATH=$HOME/.cabal/bin:$PATH
 
 echo "-----> Updating Cabal"
 cabal update
-LD_LIBRARY_PATH=$CACHE_DIR/lib cabal install happy -j5 --disable-library-profiling --disable-executable-profiling --disable-shared
+LD_LIBRARY_PATH=$CACHE_DIR/lib cabal install yesod-platform -j5 --disable-library-profiling --disable-executable-profiling --disable-shared
 
 echo "-----> Release the hounds! Installing application"
 cd $BUILD_DIR
